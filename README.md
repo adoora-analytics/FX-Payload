@@ -6,8 +6,8 @@ This repository reflects realistic pipeline evolution, with progress tracked thr
 
 ## Project Goal
 The goal of this project is to practice and demonstrate:
-Designing a clear Extract - Transform - Load (ETL) pipeline
-Working with real-world API data
-Normalizing nested JSON into structured records
-Separating concerns across pipeline stages
-Using Git properly to track incremental progress
+1. Designing a clear Extract - Transform - Load (ETL) pipeline.
+2. Working with real-world API data.
+3. Normalizing nested JSON into structured records.
+4. Separating concerns across pipeline stages.
+5. Using Git properly to track incremental progress.
