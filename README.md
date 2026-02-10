@@ -28,7 +28,7 @@ fx-payload/
 ├── src/
 │   ├── config.py        # Configuration and paths
 │   ├── extract.py       # API ingestion logic
-│   ├── transform.py    # Data normalization logic
+│   ├── transform.py     # Data normalization logic
 │   ├── load.py          # Data persistence logic
 │   └── main.py          # Pipeline entry point
 ├── data/
