@@ -11,3 +11,13 @@ The goal of this project is to practice and demonstrate:
 3. Normalizing nested JSON into structured records.
 4. Separating concerns across pipeline stages.
 5. Using Git properly to track incremental progress.
+
+## Pipeline Overview
+- Extract
+Fetches latest FX rates from a public API.
+- Transform
+Converts nested API responses into row-level, analytics-ready records.
+- Load
+Writes cleaned data to structured output formats.
+- Main
+A lightweight entry point coordinates the pipeline without embedding business logic.
