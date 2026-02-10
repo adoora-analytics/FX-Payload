@@ -21,3 +21,19 @@ Converts nested API responses into row-level, analytics-ready records.
 Writes cleaned data to structured output formats.
 - Main:
 A lightweight entry point coordinates the pipeline without embedding business logic.
+
+## Project Structure 
+fx-payload/
+├── src/
+│   ├── config.py        # Configuration and paths
+│   ├── extract.py       # API ingestion logic
+│   ├── transform.py    # Data normalization logic
+│   ├── load.py          # Data persistence logic
+│   └── main.py          # Pipeline entry point
+├── data/
+│   ├── raw/             # Raw API payloads (git ignored)
+│   └── processed/       # Cleaned outputs (git ignored)
+├── notes/               # Optional learning notes
+├── requirements.txt
+├── .gitignore
+└── README.md
