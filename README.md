@@ -23,6 +23,7 @@ Writes cleaned data to structured output formats.
 A lightweight entry point coordinates the pipeline without embedding business logic.
 
 ## Project Structure 
+```text
 fx-payload/
 ├── src/
 │   ├── config.py        # Configuration and paths
@@ -37,3 +38,4 @@ fx-payload/
 ├── requirements.txt
 ├── .gitignore
 └── README.md
+```
