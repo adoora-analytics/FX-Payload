@@ -13,11 +13,11 @@ The goal of this project is to practice and demonstrate:
 5. Using Git properly to track incremental progress.
 
 ## Pipeline Overview
-- Extract
+- Extract:
 Fetches latest FX rates from a public API.
-- Transform
+- Transform:
 Converts nested API responses into row-level, analytics-ready records.
-- Load
+- Load:
 Writes cleaned data to structured output formats.
-- Main
+- Main:
 A lightweight entry point coordinates the pipeline without embedding business logic.
