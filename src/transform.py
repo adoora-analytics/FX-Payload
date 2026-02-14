@@ -22,16 +22,23 @@ def normalize_rates(raw_fx):
     base = raw_fx.get("base_code") 
     rates = raw_fx.get("rates", {})
     date = raw_fx.get("time_last_update_utc")
+    source = "exchangerate-api"     # additional column for all records
 
 
+    # schema properly updated
     cleaned = []
-    for quote, rate in rates.items():
+    for currency, value in rates.items():   
+        fval = safe_float(value)
+        if fval is None and fval < 0:          # skip rates with empty & negative values
+            continue
+            
         cleaned.append(
             {
-                "date": date,
-                "base": base,
-                "quote": quote,
-                "rate": safe_float(rate),
+                "rate_date": date,
+                "base_currency": base,
+                "target_currency": currency,
+                "rate": fval,
+                "source": source,
             }
         )
     return cleaned
