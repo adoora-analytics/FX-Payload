@@ -24,3 +24,12 @@ def save_csv(records, name):
         writer.writerows(records)
 
     return path
+
+def read_csv(name):
+    path = PROCESSED_DIR / f"{name}.csv"
+    if not path.exists():
+        return []
+
+    with path.open("r", encoding="utf-8") as f:
+        reader = csv.DictReader(f)
+        return list(reader)
