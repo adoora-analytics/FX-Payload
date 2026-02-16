@@ -22,3 +22,7 @@ Commits represent learning milestones and improvements rather than strict stage-
     - verified end-to-end execution
     - save raw payload locally (JSON and CSV)
 
+## Milestone 5 - Data Quality & Deduplication
+    - implement natural-key deduplication
+    -
+    -
