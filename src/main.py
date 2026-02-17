@@ -1,29 +1,36 @@
 from extract import fetch_latest_rates, save_raw
 from transform import normalize_rates
-from load import save_json, save_csv
+from dedup import deduplicate
+from load import save_json, save_csv, read_csv
 
-def main():
+def run():
     # extract
-    raw = fetch_latest_rates()
-    raw_path = save_raw(raw, "fx_raw_usd")   
+    raw_fx = fetch_latest_rates()
+    raw_path = save_raw(raw_fx, "fx_raw_usd")   
 
     # transform
-    cleaned = normalize_rates(raw)          
+    transformed_records = normalize_rates(raw_fx) 
 
-    # load
-    csv_path = save_csv(cleaned, "fx_rates_USD_clean")     
-    json_path = save_json(cleaned, "fx_rates_USD_clean")   
+    # load existing & new records
+    existing_records = read_csv("fx_rates_usd_clean")
+    new_records = deduplicate(transformed_records, existing_records)
+
+    # merge + save
+    final_records = existing_records + new_records
+             
+    # save CSV & JSON
+    csv_path = save_csv(final_records, "fx_rates_USD_clean")     
+    json_path = save_json(final_records, "fx_rates_USD_clean")   
 
 
-    print("ETL complete")           # indicates ETL completion
-    print("Raw:", raw)              # prints raw API response
-    print("JSON:", json_path)       # prints path to cleaned JSON
-    print("CSV:", csv_path)         # prints path to cleaned CSV
-    print("Rows:", len(cleaned))    # prints number of records in cleaned data
-    
+    print("ETL complete")               # indicates ETL completion
+    print("Raw:", raw_path)             # prints raw API response
+    print("JSON:", json_path)           # prints path to cleaned JSON
+    print("CSV:", csv_path)             # prints path to cleaned CSV
+    print("Rows:", len(final_records))  # prints number of records in cleaned data
 
 if __name__ == "__main__":
-    main()
+    run()
 
 
 
