@@ -23,6 +23,6 @@ Commits represent learning milestones and improvements rather than strict stage-
     - save raw payload locally (JSON and CSV)
 
 ## Milestone 5 - Data Quality & Deduplication
-    - implement natural-key deduplication
-    -
+    - implement natural-key via dedup script
+    - implement incremental load
     -
