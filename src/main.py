@@ -2,6 +2,7 @@ from extract import fetch_latest_rates, save_raw
 from transform import normalize_rates
 from dedup import deduplicate
 from load import save_json, save_csv, read_csv
+from validate import validate_rows
 
 def run():
     # extract
@@ -9,7 +10,11 @@ def run():
     raw_path = save_raw(raw_fx, "fx_raw_usd")   
 
     # transform
-    transformed_records = normalize_rates(raw_fx) 
+    transformed_records = normalize_rates(raw_fx)
+
+    # validate
+    validated = validate_rows(transformed_records)  # returns list[FxRow]
+    validated_dicts = [v.__dict__ for v in validated] 
 
     # load existing & new records
     existing_records = read_csv("fx_rates_usd_clean")

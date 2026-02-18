@@ -27,7 +27,10 @@ def normalize_rates(raw_fx):
 
     # schema properly updated
     cleaned = []
-    for currency, value in rates.items():   
+    for currency, value in rates.items(): 
+        if currency == base:    # skips the self rate record
+            continue
+
         fval = safe_float(value)
         if fval is None and fval < 0:          # skip rates with empty & negative values
             continue
