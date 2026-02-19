@@ -45,3 +45,10 @@ fx-payload/
 pip install -r requirements.txt
 python src/main.py
 ```
+
+## Development Approach
+- One evolving codebase
+- Daily commits represent learning progress
+- main.py remains thin and orchestration-focused
+- Business logic lives in dedicated modules
+- Git history documents the pipeline’s evolution
