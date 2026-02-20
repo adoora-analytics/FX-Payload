@@ -1,0 +1,19 @@
+2026-02-20T12:49:43Z | INFO | run=871a67a16d62 | fx_etl | ETL run started
+2026-02-20T12:49:45Z | INFO | run=871a67a16d62 | fx_etl | raw saved to C:\Users\Admin\Documents\DataEngineering\DE_BOOTCAMP\fx_github\FX_payload\data\raw\fx_raw_usd_20260220T114945Z.json
+2026-02-20T12:49:45Z | INFO | run=871a67a16d62 | fx_etl | transform produced 165 rows
+2026-02-20T12:49:45Z | INFO | run=871a67a16d62 | fx_etl | validation passed for 165 rows
+2026-02-20T12:49:45Z | INFO | run=871a67a16d62 | fx_etl | loaded existing rows=497 from fx_rates_usd_clean.csv
+2026-02-20T12:49:45Z | INFO | run=871a67a16d62 | fx_etl | new unique rows after dedupe=165
+2026-02-20T12:49:45Z | INFO | run=871a67a16d62 | fx_etl | ETL complete
+2026-02-20T12:49:45Z | INFO | run=871a67a16d62 | fx_etl | raw:  C:\Users\Admin\Documents\DataEngineering\DE_BOOTCAMP\fx_github\FX_payload\data\raw\fx_raw_usd_20260220T114945Z.json
+2026-02-20T12:49:45Z | INFO | run=871a67a16d62 | fx_etl | json: C:\Users\Admin\Documents\DataEngineering\DE_BOOTCAMP\fx_github\FX_payload\data\processed\fx_rates_usd_clean.json
+2026-02-20T12:49:45Z | INFO | run=871a67a16d62 | fx_etl | csv:  C:\Users\Admin\Documents\DataEngineering\DE_BOOTCAMP\fx_github\FX_payload\data\processed\fx_rates_usd_clean.csv
+2026-02-20T12:49:45Z | ERROR | run=871a67a16d62 | fx_etl | ETL failed
+Traceback (most recent call last):
+  File "C:\Users\Admin\Documents\DataEngineering\DE_BOOTCAMP\fx_github\FX_payload\src\main.py", line 61, in <module>
+    run()
+    ~~~^^
+  File "C:\Users\Admin\Documents\DataEngineering\DE_BOOTCAMP\fx_github\FX_payload\src\main.py", line 56, in run
+    log.info("appended rows: %d", len(clean_records))
+                                      ^^^^^^^^^^^^^
+NameError: name 'clean_records' is not defined. Did you mean: 'new_records'?

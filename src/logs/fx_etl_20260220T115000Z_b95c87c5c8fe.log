@@ -1,0 +1,11 @@
+2026-02-20T12:50:00Z | INFO | run=b95c87c5c8fe | fx_etl | ETL run started
+2026-02-20T12:50:01Z | INFO | run=b95c87c5c8fe | fx_etl | raw saved to C:\Users\Admin\Documents\DataEngineering\DE_BOOTCAMP\fx_github\FX_payload\data\raw\fx_raw_usd_20260220T115001Z.json
+2026-02-20T12:50:01Z | INFO | run=b95c87c5c8fe | fx_etl | transform produced 165 rows
+2026-02-20T12:50:01Z | INFO | run=b95c87c5c8fe | fx_etl | validation passed for 165 rows
+2026-02-20T12:50:01Z | INFO | run=b95c87c5c8fe | fx_etl | loaded existing rows=662 from fx_rates_usd_clean.csv
+2026-02-20T12:50:01Z | INFO | run=b95c87c5c8fe | fx_etl | new unique rows after dedupe=0
+2026-02-20T12:50:01Z | INFO | run=b95c87c5c8fe | fx_etl | ETL complete
+2026-02-20T12:50:01Z | INFO | run=b95c87c5c8fe | fx_etl | raw:  C:\Users\Admin\Documents\DataEngineering\DE_BOOTCAMP\fx_github\FX_payload\data\raw\fx_raw_usd_20260220T115001Z.json
+2026-02-20T12:50:01Z | INFO | run=b95c87c5c8fe | fx_etl | json: C:\Users\Admin\Documents\DataEngineering\DE_BOOTCAMP\fx_github\FX_payload\data\processed\fx_rates_usd_clean.json
+2026-02-20T12:50:01Z | INFO | run=b95c87c5c8fe | fx_etl | csv:  C:\Users\Admin\Documents\DataEngineering\DE_BOOTCAMP\fx_github\FX_payload\data\processed\fx_rates_usd_clean.csv
+2026-02-20T12:50:01Z | INFO | run=b95c87c5c8fe | fx_etl | appended rows: 0
