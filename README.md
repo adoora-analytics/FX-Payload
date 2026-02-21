@@ -26,11 +26,15 @@ A lightweight entry point coordinates the pipeline without embedding business lo
 ```text
 fx-payload/
 ├── src/
+│   ├── logs/            # Logs write to this folder (git ignored)
 │   ├── config.py        # Configuration and paths
 │   ├── extract.py       # API ingestion logic
 │   ├── transform.py     # Data normalization logic
 │   ├── load.py          # Data persistence logic
-│   └── main.py          # Pipeline entry point
+│   ├── main.py          # Pipeline entry point
+│   ├── dedup.py         # Data deduplication logic 
+│   ├── validate.py      # Data integrity and schema checks
+│   └── logger.py        # Centralized logging config
 ├── data/
 │   ├── raw/             # Raw API payloads (git ignored)
 │   └── processed/       # Cleaned outputs (git ignored)
