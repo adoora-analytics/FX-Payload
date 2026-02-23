@@ -25,4 +25,9 @@ Commits represent learning milestones and improvements rather than strict stage-
 ## Milestone 5 - Data Quality & Deduplication
     - implement natural-key via dedup script
     - implement incremental load
-    -
+    - implement validation and logging 
+
+## Milestone 6 - Structural Hardening
+    - 
+    - 
+    - 
