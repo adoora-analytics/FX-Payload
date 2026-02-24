@@ -5,5 +5,5 @@ data/raw/*
 data/processed/*
 !data/raw/.gitkeep
 !data/processed/.gitkeep
-src/logs/*
-!src/logs/.gitkeep
+logs/*
+!logs/.gitkeep

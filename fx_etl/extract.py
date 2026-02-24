@@ -3,7 +3,7 @@ from datetime import datetime, timezone
 
 import requests
 
-from config import BASE_URL, RAW_DIR, TIMEOUT_SECONDS
+from fx_etl.config import BASE_URL, RAW_DIR, TIMEOUT_SECONDS
 
 
 def utc_stamp():

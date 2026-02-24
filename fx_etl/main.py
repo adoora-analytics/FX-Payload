@@ -1,11 +1,11 @@
 import logging
 
-from extract import fetch_latest_rates, save_raw
-from transform import normalize_rates
-from dedup import deduplicate
-from load import save_json, save_csv, read_csv
-from validate import validate_rows
-from logger import setup_logging
+from fx_etl.extract import fetch_latest_rates, save_raw
+from fx_etl.transform import normalize_rates
+from fx_etl.dedup import deduplicate
+from fx_etl.load import save_json, save_csv, read_csv
+from fx_etl.validate import validate_rows
+from fx_etl.logger import setup_logging
 
 log = logging.getLogger("fx_etl")
 

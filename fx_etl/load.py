@@ -1,7 +1,7 @@
 import csv
 import json
 
-from config import PROCESSED_DIR
+from fx_etl.config import PROCESSED_DIR
 
 
 def save_json(records, name):
