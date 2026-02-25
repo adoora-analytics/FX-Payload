@@ -47,7 +47,7 @@ fx-payload/
 ## How to Run
 ```bash
 pip install -r requirements.txt
-python src/main.py
+python -m fx_etl
 ```
 
 ## Development Approach
