@@ -25,8 +25,9 @@ A lightweight entry point coordinates the pipeline without embedding business lo
 ## Project Structure 
 ```text
 fx-payload/
-├── src/
-│   ├── logs/            # Logs write to this folder (git ignored)
+├── fx_etl/
+│   ├── __init__.py      # Package marker
+│   ├── __main__.py      # Executable entry point
 │   ├── config.py        # Configuration and paths
 │   ├── extract.py       # API ingestion logic
 │   ├── transform.py     # Data normalization logic
@@ -39,6 +40,7 @@ fx-payload/
 │   ├── raw/             # Raw API payloads (git ignored)
 │   └── processed/       # Cleaned outputs (git ignored)
 ├── notes/               # Optional learning notes
+├── logs/                # Log files (git ignored)
 ├── requirements.txt
 ├── .gitignore
 └── README.md
