@@ -10,8 +10,8 @@ def utc_stamp():
     return datetime.now(timezone.utc).strftime("%Y%m%dT%H%M%SZ")
 
 
-def fetch_latest_rates(base_currency="USD"):
-    url = f"{BASE_URL}/latest/{base_currency}"
+def fetch_latest_rates(run_date: str, base: str):
+    url = f"{BASE_URL}/latest/{base}"
     resp = requests.get(url, timeout=TIMEOUT_SECONDS)
     resp.raise_for_status()  # crash loudly if API fails
     data = resp.json() # fx APIs always returns a dict, not lists

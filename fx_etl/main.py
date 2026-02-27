@@ -9,7 +9,7 @@ from fx_etl.logger import setup_logging
 
 log = logging.getLogger("fx_etl")
 
-def run():
+def run(run_date: str, base: str) -> None:
 
     #  log setup (console + logs/ file)
     setup_logging(log_dir="logs", level="INFO")
@@ -17,13 +17,12 @@ def run():
 
 
     # extract
-    base = "USD"
-    raw_fx = fetch_latest_rates(base)
-    raw_path = save_raw(raw_fx, f"fx_raw_{base.lower()}")   
+    raw_fx = fetch_latest_rates(run_date=run_date, base=base)         # base means: 1 USD = X currency
+    raw_path = save_raw(raw_fx, f"fx_raw_{base.lower()}")
     log.info("raw saved to %s", raw_path)
 
     # transform
-    transformed_records = normalize_rates(raw_fx)
+    transformed_records = normalize_rates(raw_fx, run_date=run_date, base=base)
     log.info("transform produced %d rows", len(transformed_records))
 
     # validate

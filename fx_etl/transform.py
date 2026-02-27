@@ -14,7 +14,7 @@ def safe_str(x):
     return s if s else None
 
 
-def normalize_rates(raw_fx):
+def normalize_rates(raw_fx, run_date: str, base: str):
     """
     convert nested rates dict into a list of records:
     """
@@ -24,6 +24,9 @@ def normalize_rates(raw_fx):
     date = raw_fx.get("time_last_update_utc")
     source = "exchangerate-api"     # additional column for all records
 
+    # raise error if transformed records not dict
+    if not isinstance(raw_fx, dict):
+        raise ValueError(f"Expected 'raw_fx' to be dict, got {type(raw_fx).__name__}")
 
     # schema properly updated
     cleaned = []
@@ -32,7 +35,7 @@ def normalize_rates(raw_fx):
             continue
 
         fval = safe_float(value)
-        if fval is None and fval < 0:          # skip rates with empty & negative values
+        if fval is None and fval <= 0:          # skip rates with empty & negative values
             continue
             
         cleaned.append(
