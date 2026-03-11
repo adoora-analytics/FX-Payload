@@ -55,7 +55,7 @@ python -m fx_etl
 
 ## Development Approach
 - One evolving codebase
-- Daily commits represent learning progress
+- Regular commits represent learning progress
 - main.py remains thin and orchestration-focused
 - Clear separation of pipeline stages
 - Git history documents the pipeline’s evolution
