@@ -13,6 +13,10 @@ Data should not be versioned in a source repository.
 The pipeline rewrites the output file for a given logical date instead of appending blindly.
 This ensures rerunning the same date produces identical results without duplication.
 
-# Reasoning:
+## Why robustness matters:
 Data pipelines must tolerate retries and partial failures without corrupting downstream data.
+
+## Why the pipeline runs as a module:
+Running the pipeline with `python -m fx_etl` provides a cleaner execution boundary and more stable imports than direct script execution.
+
 
