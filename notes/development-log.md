@@ -28,6 +28,8 @@ Commits represent learning milestones and improvements rather than strict stage-
     - implement validation and logging 
 
 ## Milestone 6 - Structural Hardening
-    - 
-    - 
-    - 
+    - implement module execution boundary
+    - pipeline now runs via `python -m fx_etl` 
+    - improve import stability and execution consistency 
+    - document architecture change in Issue #1
+
