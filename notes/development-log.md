@@ -33,3 +33,10 @@ Commits represent learning milestones and improvements rather than strict stage-
     - improve import stability and execution consistency 
     - document architecture change in Issue #1
 
+## Milestone 7 - Pipeline Robustness
+    - implement interface validation (CLI parameters)
+    - pipeline now schedulable, deterministic and backfillable
+    - implement idempotent reruns and safe operation handling
+    - document architecture change in Issues #2, 3 & 4
+
+
